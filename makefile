@@ -1,8 +1,13 @@
-compile: main.c 
-	 gcc main.c -o ming
+NICKNAME = Loma
 
-run: ming
-	 ./ming
+CC = gcc
+CFLAGS = -Wall
 
-clean: ming
-	 rm ming
+DEPS = $(NICKNAME).h
+
+main: main.c $(DEPS)
+	$(CC) $(CFLAGS) -o main main.c
+
+run:
+	
+	@./main
